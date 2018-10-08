@@ -1,0 +1,118 @@
+/**
+ * This injects Tailwind's base styles, which is a combination of
+ * Normalize.css and some additional base styles.
+ *
+ * You can see the styles here:
+ * https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
+ *
+ * If using `postcss-import`, use this import instead:
+ *
+ * @import "tailwindcss/preflight";
+ */
+@tailwind preflight;
+
+/**
+  * This injects any component classes registered by plugins.
+  *
+  * If using `postcss-import`, use this import instead:
+  *
+  * @import "tailwindcss/components";
+  */
+@tailwind components;
+
+/**
+  * Here you would add any of your custom component classes; stuff that you'd
+  * want loaded *before* the utilities so that the utilities could still
+  * override them.
+  *
+  * Example:
+  *
+  * .btn { ... }
+  * .form-input { ... }
+  *
+  * Or if using a preprocessor or `postcss-import`:
+  *
+  * @import "components/buttons";
+  * @import "components/forms";
+  */
+
+.modal {
+	@apply fixed pin-x pin-b bg-whiter h-screen-75 translateY-100 transition z-20;
+
+	border-top-left-radius: 2rem;
+	border-top-right-radius: 2rem;
+}
+.modal::before {
+	@apply absolute pin-l pin-t h-24 w-24 bg-whiter ml-12 rounded-full;
+	content: '';
+	transform: translateY(-35%);
+}
+.overlay {
+	@apply fixed pin bg-white opacity-50 scale-0 transition z-10;
+}
+.scrollbar::-webkit-scrollbar {
+	width: 8px;
+	border-radius: 8px;
+}
+.scrollbar::-webkit-scrollbar-button {
+	display: none;
+}
+.scrollbar::-webkit-scrollbar-corner,
+.scrollbar::-webkit-scrollbar-track {
+	@apply bg-white;
+}
+.scrollbar::-webkit-scrollbar-thumb {
+	@apply bg-black;
+	border-radius: 8px;
+}
+.modal-close {
+	@apply text-whiter bg-black text-xl h-8 w-8 rounded-full absolute pin-t pin-r m-4;
+}
+.modal-badge {
+	@apply absolute pin-l pin-t h-16 w-16 bg-white rounded-full ml-16;
+	transform: translateY(-35%);
+}
+
+/**
+  * This injects all of Tailwind's utility classes, generated based on your
+  * config file.
+  *
+  * If using `postcss-import`, use this import instead:
+  *
+  * @import "tailwindcss/utilities";
+  */
+@tailwind utilities;
+
+.translateY-100 {
+	transform: translate3d(0, 100%, 0);
+}
+.translateY-0 {
+	transform: translate3d(0, 0, 0);
+}
+.scale-0 {
+	transform: scale3d(1, 0, 1);
+	transform-origin: bottom center;
+}
+.scale-1 {
+	transform: scale3d(1, 1, 1);
+}
+.transition {
+	transition-property: all;
+	transition-duration: 300ms;
+	transition-timing-function: ease-in-out;
+}
+
+/**
+  * Here you would add any custom utilities you need that don't come out of the
+  * box with Tailwind.
+  *
+  * Example :
+  *
+  * .bg-pattern-graph-paper { ... }
+  * .skew-45 { ... }
+  *
+  * Or if using a preprocessor or `postcss-import`:
+  *
+  * @import "utilities/background-patterns";
+  * @import "utilities/skew-transforms";
+  */

@@ -1,32 +1,21 @@
 import { connect } from 'inferno-fluxible';
-import { css } from 'emotion';
-import { textCenter } from '../styles/utils';
+import { ChevronDown } from '../icons/ChevronDown';
 
-const base = css`
-	display: flex;
-	flex-flow: column nowrap;
-	align-items: center;
-
-	& button {
-		margin: auto 0;
-	}
-`;
-
-const btn = css`
-	border-width: 0;
-	padding: 0.5rem 1rem;
-	background-color: var(--lighter-dark);
-	cursor: pointer;
-	color: var(--light);
-`;
-
-function JobComponent({ job, openModal }) {
+function JobComponent({ job, openModal, company }) {
 	return (
-		<article class={base}>
-			<h3 class={textCenter}>{job.title}</h3>
+		<article class="bg-whiter p-4 mt-5 rounded-lg flex items-center shadow">
+			<div class="h-16 w-16 rounded-full bg-white" />
 
-			<button class={btn} onClick={_ => openModal(job)}>
-				Show More
+			<div class="m-5">
+				<h3 class="text-black">{company}</h3>
+				<h4 class="text-grey text-sm mt-3">{job.title}</h4>
+			</div>
+
+			<button
+				onClick={_ => openModal(job)}
+				class="h-8 w-8 border-purple border-2 rounded-full ml-auto bg-indigo text-whiter"
+			>
+				<ChevronDown className="h-full w-full fill-current" />
 			</button>
 		</article>
 	);

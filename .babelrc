@@ -1,8 +1,4 @@
 {
 	"presets": ["@babel/env"],
-	"plugins": [
-		"babel-plugin-inferno",
-		"transform-class-properties",
-		["emotion", { "sourceMap": true, "autoLabel": true }]
-	]
+	"plugins": ["babel-plugin-inferno", "transform-class-properties"]
 }

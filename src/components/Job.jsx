@@ -1,13 +1,13 @@
 import { connect } from 'inferno-fluxible';
 import { ChevronDown } from '../icons/ChevronDown';
 
-function JobComponent({ job, openModal, company }) {
+function JobComponent({ job, openModal }) {
 	return (
 		<article class="bg-whiter p-4 mt-5 rounded-lg flex items-center shadow">
 			<div class="h-16 w-16 rounded-full bg-white" />
 
 			<div class="m-5">
-				<h3 class="text-black">{company}</h3>
+				<h3 class="text-black">{job.company.name}</h3>
 				<h4 class="text-grey text-sm mt-3">{job.title}</h4>
 			</div>
 
@@ -24,7 +24,9 @@ function JobComponent({ job, openModal, company }) {
 const mutations = {
 	openModal(store, selectedJob) {
 		document.body.style.overflow = 'hidden';
-		store.updateStore({ showModal: true, selectedJob });
+		store.updateStore({ showModal: true, selectedJob }, _ =>
+			console.log(store.getStore()),
+		);
 	},
 };
 

@@ -2,10 +2,11 @@ import { Component } from 'inferno';
 import { Loading } from './components/Loading';
 import { Company } from './components/Company';
 import { Modal } from './components/Modal';
+import { Job } from './components/Job';
 
 export class App extends Component {
 	state = {
-		data: {},
+		jobs: [],
 		loading: true,
 	};
 
@@ -16,24 +17,28 @@ export class App extends Component {
 	getJobs = _ => {
 		fetch('http://localhost:3000/api/jobs')
 			.then(r => r.json())
-			.then(data => this.setState({ data }))
+			.then(jobs => this.setState({ jobs, loading: false }))
+			.then(_ => console.log(this))
 			.catch(console.error);
 	};
 
 	render() {
-		const { companies } = this.state.data;
+		const { jobs, loading } = this.state;
 
-		return companies ? (
+		return loading ? (
+			<Loading />
+		) : (
 			<div>
 				<h1 class="my-8 text-center">Alex's Job Listing</h1>
 
-				{companies.map(company => (
-					<Company company={company} key={company.name} />
-				))}
+				<div className="container">
+					{jobs.map(job => (
+						<Job job={job} key={job.id} />
+					))}
+				</div>
+
 				<Modal />
 			</div>
-		) : (
-			<Loading />
 		);
 	}
 }

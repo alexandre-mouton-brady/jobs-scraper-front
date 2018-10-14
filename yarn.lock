@@ -289,7 +289,7 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
 
-"@babel/plugin-syntax-jsx@7.0.0", "@babel/plugin-syntax-jsx@^7.0.0":
+"@babel/plugin-syntax-jsx@^7", "@babel/plugin-syntax-jsx@^7.0.0":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-jsx/-/plugin-syntax-jsx-7.0.0.tgz#034d5e2b4e14ccaea2e4c137af7e4afb39375ffd"
   integrity sha512-PdmL2AoPsCLWxhIr3kG2+F9v4WH06Q3z+NoGVpQgnUNGcagXHq5sB3OXxkSahKq9TLdNMN/AJzFYSOo8UKDMHg==
@@ -620,10 +620,10 @@
     globals "^11.1.0"
     lodash "^4.17.10"
 
-"@babel/types@7.0.0":
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.0.0.tgz#6e191793d3c854d19c6749989e3bc55f0e962118"
-  integrity sha512-5tPDap4bGKTLPtci2SUl/B7Gv8RnuJFuQoWx26RJobS0fFrz4reUA3JnwIM+HVHEmWE0C1mzKhDtTp8NsWY02Q==
+"@babel/types@^7":
+  version "7.1.3"
+  resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.1.3.tgz#3a767004567060c2f40fca49a304712c525ee37d"
+  integrity sha512-RpPOVfK+yatXyn8n4PB1NW6k9qjinrXrRR8ugBN8fD6hCy5RXI6PSbVqpOJBO9oSaY7Nom4ohj35feb0UR9hSA==
   dependencies:
     esutils "^2.0.2"
     lodash "^4.17.10"
@@ -855,13 +855,13 @@ babel-messages@^6.23.0:
   dependencies:
     babel-runtime "^6.22.0"
 
-babel-plugin-inferno@6.0.0-5:
-  version "6.0.0-5"
-  resolved "https://registry.yarnpkg.com/babel-plugin-inferno/-/babel-plugin-inferno-6.0.0-5.tgz#2426f03f22d1ed085d0c073681cd2968aadc5ead"
-  integrity sha512-0RKGtcgYp4RdVIXo6EATg3woZ14gYu55n20td6Ip5N3zQ4lLn0LC7JOvoGYR7sIIhx1BlB2x+WENxwNzFt53Bw==
+babel-plugin-inferno@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-inferno/-/babel-plugin-inferno-6.0.0.tgz#198c1c5456d041c71231f4d8bc4b9958ad18bd8c"
+  integrity sha512-9/o7VhRfKshCCpzbhZzyRto0EdL+YTIGNuuBOCuZ90OQTgAG3i3QZKliGlhFv0YSp7RnLIycZB+DMoPKsIlaHw==
   dependencies:
-    "@babel/plugin-syntax-jsx" "7.0.0"
-    "@babel/types" "7.0.0"
+    "@babel/plugin-syntax-jsx" "^7"
+    "@babel/types" "^7"
 
 babel-plugin-syntax-class-properties@^6.8.0:
   version "6.13.0"
@@ -2218,10 +2218,10 @@ flatten@^1.0.2:
   resolved "https://registry.yarnpkg.com/flatten/-/flatten-1.0.2.tgz#dae46a9d78fbe25292258cc1e780a41d95c03782"
   integrity sha1-2uRqnXj74lKSJYzB54CkHZXAN4I=
 
-fluxible-js@^2.1.1, fluxible-js@^2.1.2:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/fluxible-js/-/fluxible-js-2.1.2.tgz#17852c26557c5b59ac311e743afa5bd81e1183ad"
-  integrity sha512-N881Bei98+upA7CsIRxoqiBKO/W5qg2uOIT90MHIcOvnw1GA+qCxmHPbFiNDZTDe4Zq2wml93D0FRpLvcyc6rw==
+fluxible-js@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/fluxible-js/-/fluxible-js-3.1.1.tgz#31ffe9ba831343f1059071bf0ff25e0381f6bd5f"
+  integrity sha512-qA7ZJE8elXNgIydS4g7R3EhISAwrrbVD+IOJh+wjvS2PRRWQ+bw6iuAkc1DPVzZ8tYJPZTjscxV4G/iStb2AgA==
 
 for-in@^1.0.2:
   version "1.0.2"
@@ -2553,57 +2553,47 @@ indexof@0.0.1:
   resolved "https://registry.yarnpkg.com/indexof/-/indexof-0.0.1.tgz#82dc336d232b9062179d05ab3293a66059fd435d"
   integrity sha1-gtwzbSMrkGIXnQWrMpOmYFn9Q10=
 
-inferno-create-class@^5.6.1:
-  version "5.6.1"
-  resolved "https://registry.yarnpkg.com/inferno-create-class/-/inferno-create-class-5.6.1.tgz#797c8444d59bfdc9a295f8981c34382b01e7fec5"
-  integrity sha512-WOydsa3s3ctS8S8+6eNuihaICowzF4/DW81GEB7Mf9UjV+uO7Y58i29xI3qXJi3rLoct5qMtRlhQ9uy6NCzRDQ==
-
-inferno-fluxible@^1.3.3:
-  version "1.3.3"
-  resolved "https://registry.yarnpkg.com/inferno-fluxible/-/inferno-fluxible-1.3.3.tgz#574560ce4008618841faddf515ab2205fec96ce7"
-  integrity sha512-GNH1HVRdiBtSADr4N8zOwOnwqxPTBlwWygI0iFuHj3ZSAVEBcMytkddrl/MaEJiQuwB966uToUiQe3UpihF4XQ==
+inferno-devtools@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/inferno-devtools/-/inferno-devtools-6.0.1.tgz#044c40a2c20a296378ed25c235c93f9bd323074e"
+  integrity sha512-lmyMfpLqszDuktJrq0NREoy7Yr6oAP3YzdrdozMaBI+KIMhRyOMMocaWDQr0n2am3qdQEc5gzM+Z0oFKEIkkGg==
   dependencies:
-    fluxible-js "^2.1.1"
-    inferno "^5.6.1"
-    inferno-create-class "^5.6.1"
-    redefine-statics-js "^1.1.2"
+    inferno "6.0.1"
+    inferno-extras "6.0.1"
 
-inferno-shared@5.6.1:
-  version "5.6.1"
-  resolved "https://registry.yarnpkg.com/inferno-shared/-/inferno-shared-5.6.1.tgz#5c5e471dbff72eb9f1768f97510a32e5fa76b6dd"
-  integrity sha512-OoRargelGtMFpiyKiOv66Ihmkpt6LLlzw7jOkJr97QqBRIjQWVvtDSriwJIy6pER6EEz9KzRUbZBaEWdPvf5kA==
-
-inferno-shared@^6.0.0-rc.1:
-  version "6.0.0-rc.1"
-  resolved "https://registry.yarnpkg.com/inferno-shared/-/inferno-shared-6.0.0-rc.1.tgz#84bce36f87f9dac94cc142835b0239303e9d048a"
-  integrity sha512-Q0NBL3WX3xfsHh4C+N889hOaZIXoOodhyAWCtnbsx1WGdeEnQanhfTkFLL1ud6njLmtg8q0+ACY7ciAx0GgNYg==
-
-inferno-vnode-flags@5.6.1:
-  version "5.6.1"
-  resolved "https://registry.yarnpkg.com/inferno-vnode-flags/-/inferno-vnode-flags-5.6.1.tgz#43974687cc54f22c24ecee116376f6c1bd697499"
-  integrity sha512-DDb6R17FX0Fs1SH+7SSVfHEFiYcN2U/DlPHB6qk2HOP149qtYgeRi5h0AAJswJCzBkV/QcBSyRirn0SAzl1NAQ==
-
-inferno-vnode-flags@^6.0.0-rc.1:
-  version "6.0.0-rc.1"
-  resolved "https://registry.yarnpkg.com/inferno-vnode-flags/-/inferno-vnode-flags-6.0.0-rc.1.tgz#2e4a92ab564189f4c2c2668aae1b0da261d6b98c"
-  integrity sha512-dCFp/6z6RTFL83mg0lrO9374RadUeoiaZ0Nl20rylpGr8f3PDL+/Be9pSqu8QyaLnJJoDmjw5UctOx9wZaib0A==
-
-inferno@6.0.0-rc.1:
-  version "6.0.0-rc.1"
-  resolved "https://registry.yarnpkg.com/inferno/-/inferno-6.0.0-rc.1.tgz#648c473378990ac86b567629e0d929909d812b67"
-  integrity sha512-HSw4WDT4BYMgUUxQsUnjgsXGSxR2himdOXV68U3SNIg5VaOxZ4xXqMIum1PXCDKA2CPpRqQX5WgGM6sxjsfVUQ==
+inferno-extras@6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/inferno-extras/-/inferno-extras-6.0.1.tgz#792231134781102a3d54bd2352192470ea264fa2"
+  integrity sha512-q4OWSxvGQljF3GXXIaGD5CrzFnDqf203I6kAElv4gbGHenE5UwlDPXQJXqUmdnC5zT4LACCRwkNh+qABLvkzsA==
   dependencies:
-    inferno-shared "^6.0.0-rc.1"
-    inferno-vnode-flags "^6.0.0-rc.1"
-    opencollective "^1.0.3"
+    inferno "6.0.1"
 
-inferno@^5.6.1:
-  version "5.6.1"
-  resolved "https://registry.yarnpkg.com/inferno/-/inferno-5.6.1.tgz#fd48043a4e9a1d861856e09494e06bdb4a1776ba"
-  integrity sha512-wbOkgg0nO7mCrxf5DYpF5K+kuqVbNZrG4DoQldjUA2IfuL2Wmb27SsH/60XBs47Cwig3TF22Ek5VYOCUxytVaQ==
+inferno-fluxible@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/inferno-fluxible/-/inferno-fluxible-2.3.0.tgz#3fa9a0a65fba74ec6c51fb80b224715de0925abc"
+  integrity sha512-CPthqmGRX5edMrQ2GfGtj1q7dOC+z5ri1hYbEDDswusVYthSatdvdAOwsovMsxw0izb1LxZZIOBvcPI+d7zeUg==
   dependencies:
-    inferno-shared "5.6.1"
-    inferno-vnode-flags "5.6.1"
+    fluxible-js "^3.1.1"
+    inferno "^6.0.1"
+    redefine-statics-js "^2.0.0"
+
+inferno-shared@6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/inferno-shared/-/inferno-shared-6.0.1.tgz#bcaaa6bd0f4bbd97256aaba4b063baffa0f400ec"
+  integrity sha512-yOb6bmRqH0Hpol7sNs+GVWaJ/Bpp1S8NENthlHbWd6VlugsNeJs3i3x17XY5r49XA8Y3FX2QyTyPYwbWqC+A7Q==
+
+inferno-vnode-flags@6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/inferno-vnode-flags/-/inferno-vnode-flags-6.0.1.tgz#9c24ffe8611a772c96b85d73426de904bb6d5fdf"
+  integrity sha512-pw+od2cN8RgbQlTyHF7ieQpz0bn8bAI3uqGimx1aHi7ULAt9NF/eR5jT/1jd6dK1ermERZdJtdYhZaIHTIXFgw==
+
+inferno@6.0.1, inferno@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/inferno/-/inferno-6.0.1.tgz#4be94ddfe7773e6493bab549fc9cc259eb8d24c9"
+  integrity sha512-YnaJzjiuXwHB3bjf/0XA+5BqTaOUp+65iMltBfdVdNXUS9y7z2ViEa9u1jC/lopl0PCl4QVnpPDmkIb0iyvU/g==
+  dependencies:
+    inferno-shared "6.0.1"
+    inferno-vnode-flags "6.0.1"
     opencollective "^1.0.3"
 
 inflight@^1.0.4:
@@ -3577,10 +3567,10 @@ pako@~1.0.5:
   resolved "https://registry.yarnpkg.com/pako/-/pako-1.0.6.tgz#0101211baa70c4bca4a0f63f2206e97b7dfaf258"
   integrity sha512-lQe48YPsMJAig+yngZ87Lus+NF+3mtu7DVOBu6b/gHO1YpKwIj5AWjZ/TOS7i46HD/UixzWb1zeWDZfGZ3iYcg==
 
-parcel@^1.10.2:
-  version "1.10.2"
-  resolved "https://registry.yarnpkg.com/parcel/-/parcel-1.10.2.tgz#0943b95634c25b719085d4ea5d9c8abdf7f557f4"
-  integrity sha512-OI7RKtkHnwhg/8Pd17UYq1Ca6NGwoWPgs55f/G/645qj34RviPQ6jESuHg2I3+EdtpmV3tyuXDoJRe1qZuPjyA==
+parcel@^1.10.3:
+  version "1.10.3"
+  resolved "https://registry.yarnpkg.com/parcel/-/parcel-1.10.3.tgz#8b989984cdd9d44935db1dde7705585b2b159769"
+  integrity sha512-YLpMPE74gxYQSOV2tIaIzIV2rkTGyeMc6P16dTOERbKSZwQjyjWvsST04HSOrPXv84usNz6iYPkvnxs7FNrgYQ==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
@@ -4542,10 +4532,10 @@ readdirp@^2.0.0:
     micromatch "^3.1.10"
     readable-stream "^2.0.2"
 
-redefine-statics-js@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/redefine-statics-js/-/redefine-statics-js-1.1.2.tgz#2be864d6e79929468a1cb30aae921a76635e83b4"
-  integrity sha512-PpdMfAiYko7ZwNquHttMHXiZiT/0/Y/ZIXA/f9a3v5xOLQdSNIjQZum7fVZvr6RtKznrBm1+vNElELoeWiAmSw==
+redefine-statics-js@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/redefine-statics-js/-/redefine-statics-js-2.0.0.tgz#5403a132594fe36293f9eb8a1d0b90d9932807cd"
+  integrity sha512-+sLNu3BBKxydrTjYNDQF3RfGtA8mhrnJ0YlKvZAxnef0bbSUz5eY5XJUK2p4VBL3eZd559tkT1kjlgFrop+D5w==
 
 reduce-css-calc@^1.2.6:
   version "1.3.0"

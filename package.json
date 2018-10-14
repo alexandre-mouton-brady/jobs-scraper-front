@@ -1,29 +1,49 @@
 {
-	"name": "scraper-front",
-	"version": "1.0.0",
-	"main": "index.js",
-	"license": "MIT",
-	"scripts": {
-		"start:dev": "parcel src/index.html"
-	},
-	"dependencies": {
-		"fluxible-js": "^3.1.1",
-		"inferno": "^6.0.1",
-		"inferno-fluxible": "^2.3.0",
-		"redefine-statics-js": "^2.0.0"
-	},
-	"devDependencies": {
-		"@babel/core": "^7.1.2",
-		"autoprefixer": "^9.1.5",
-		"babel-plugin-inferno": "^6.0.0",
-		"babel-plugin-transform-class-properties": "^6.24.1",
-		"inferno-devtools": "^6.0.1",
-		"parcel": "^1.10.3",
-		"postcss-import": "^12.0.0",
-		"postcss-modules": "^1.4.1",
-		"tailwindcss": "^0.6.6"
-	},
-	"alias": {
-		"inferno": "./node_modules/inferno/dist/index.dev.esm.js"
-	}
+  "name": "scraper-front",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "register-service-worker": "^1.0.0",
+    "vue": "^2.5.17",
+    "vue-class-component": "^6.0.0",
+    "vue-property-decorator": "^7.0.0",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^1.0.1",
+    "@ky-is/vue-cli-plugin-tailwind": "^1.4.0",
+    "@vue/cli-plugin-babel": "^3.0.5",
+    "@vue/cli-plugin-eslint": "^3.0.5",
+    "@vue/cli-plugin-pwa": "^3.0.5",
+    "@vue/cli-plugin-typescript": "^3.0.5",
+    "@vue/cli-service": "^3.0.5",
+    "@vue/eslint-config-prettier": "^3.0.5",
+    "@vue/eslint-config-typescript": "^3.0.5",
+    "lint-staged": "^7.2.2",
+    "postcss-preset-env": "^5.3.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "tailwindcss": "^0.6.5",
+    "typescript": "^3.0.0",
+    "vue-template-compiler": "^2.5.17"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "vue-cli-service lint",
+      "git add"
+    ],
+    "*.vue": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  }
 }

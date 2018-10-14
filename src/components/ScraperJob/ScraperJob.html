@@ -1,0 +1,14 @@
+<article class="bg-whiter px-4 py-2 mt-6 rounded-lg flex items-center shadow">
+    <div class="h-16 w-16 rounded-full bg-white flex justify-center items-center overflow-hidden">
+        <img class="w-100" :src="`http://localhost:3000/imgs/${job.company.logo}`">
+    </div>
+
+    <div class="m-5">
+        <h3 class="text-black">{{ job.company.name }}</h3>
+        <h4 class="text-grey text-sm mt-3">{{ job.title }}</h4>
+    </div>
+
+    <button @click="showJobDetails(job)" class="h-8 w-8 border-purple border-2 rounded-full ml-auto bg-indigo text-whiter">
+        <chevron-down class="h-full w-full fill-current" />
+    </button>
+</article>

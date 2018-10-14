@@ -1,0 +1,115 @@
+/**
+ * This injects Tailwind's base styles, which is a combination of
+ * Normalize.css and some additional base styles.
+ *
+ * You can see the styles here:
+ * https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
+ */
+@import '~tailwindcss/preflight.css';
+
+body {
+	@apply font-sans bg-white;
+}
+
+/**
+ * This injects any component classes registered by plugins.
+ */
+@import '~tailwindcss/components.css';
+
+/**
+ * Here you would add any of your custom component classes; stuff that you'd
+ * want loaded *before* the utilities so that the utilities could still
+ * override them.
+ *
+ * Example:
+ * @import 'components/buttons';
+ */
+
+/**
+ * This injects all of Tailwind's utility classes, generated based on your
+ * config file.
+ */
+
+.modal {
+	@apply fixed pin-x pin-b bg-whiter h-screen-75 translateY-0 transition z-20;
+
+	border-top-left-radius: 2rem;
+	border-top-right-radius: 2rem;
+}
+.modal::before {
+	@apply absolute pin-l pin-t h-24 w-24 bg-whiter ml-12 rounded-full;
+	content: '';
+	transform: translateY(-35%);
+}
+.overlay {
+	@apply fixed pin bg-white opacity-50 z-10 cursor-not-allowed;
+}
+.scrollbar::-webkit-scrollbar {
+	width: 8px;
+	border-radius: 8px;
+}
+.scrollbar::-webkit-scrollbar-button {
+	display: none;
+}
+.scrollbar::-webkit-scrollbar-corner,
+.scrollbar::-webkit-scrollbar-track {
+	@apply bg-white;
+}
+.scrollbar::-webkit-scrollbar-thumb {
+	@apply bg-black;
+	border-radius: 8px;
+}
+.modal-close {
+	@apply text-whiter bg-black text-xl h-8 w-8 rounded-full absolute pin-t pin-r m-4;
+}
+.modal-badge {
+	@apply absolute pin-l pin-t h-16 w-16 bg-white rounded-full ml-16 flex justify-center items-center overflow-hidden;
+	transform: translateY(-35%);
+}
+
+@import '~tailwindcss/utilities.css';
+
+/**
+ * Here you would add any custom utilities you need that don't come out of the
+ * box with Tailwind.
+ *
+ * Example:
+ * @import 'utilities/background-patterns';
+ */
+
+.translateY-100 {
+	transform: translate3d(0, calc(100% + 2.1rem), 0);
+}
+.translateY-0 {
+	transform: translate3d(0, 0, 0);
+}
+.scale-0 {
+	transform: scale3d(1, 0, 1);
+	transform-origin: bottom center;
+}
+.scale-1 {
+	transform: scale3d(1, 1, 1);
+}
+.transition {
+	transition-property: all;
+	transition-duration: 300ms;
+	transition-timing-function: ease-in-out;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+	transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+	opacity: 0;
+}
+
+.slide-enter-active,
+.slide-leave-active {
+	transition: transform 0.5s;
+}
+.slide-enter,
+.slide-leave-to {
+	transform: translate3d(0, calc(100% + 2.1rem), 0);
+}

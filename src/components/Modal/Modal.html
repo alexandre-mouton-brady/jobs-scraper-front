@@ -1,0 +1,26 @@
+<div>
+    <transition name="fade">
+        <div class="overlay" v-if="showOverlay" @click="dismissJobDetails"></div>
+    </transition>
+
+    <transition name="slide">
+        <div class="modal" v-if="showModal">
+            <span class="modal-badge">
+                <img class="w-100" :src="`http://localhost:3000/imgs/${job.company.logo}`">
+            </span>
+
+            <div class="container flex flex-col relative h-full">
+                <button @click="dismissJobDetails" class="modal-close">&times;</button>
+
+                <h1 class="mt-16">{{ job.title }}</h1>
+                <h2 class="text-grey text-base mt-4">{{ job.location }}</h2>
+
+                <h3 class="text-sm text-grey mt-8">Qualifications</h3>
+
+                <p class="h-full scrollbar overflow-auto text-black leading-loose font-semibold mt-2 pr-6">
+                    {{ job.description }}
+                </p>
+            </div>
+        </div>
+    </transition>
+</div>

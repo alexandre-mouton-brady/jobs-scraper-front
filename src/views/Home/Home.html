@@ -1,0 +1,9 @@
+<main class="container overflow-hidden py-8">
+    <h1 class="font-semibold">Alex's Job Listing</h1>
+
+    <section class="mt-8" v-if="jobs">
+        <scraper-job v-for="job in jobs" :key="job.id" :job="job" />
+    </section>
+
+    <modal />
+</main>

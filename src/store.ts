@@ -3,16 +3,21 @@ import Vuex from 'vuex';
 
 Vue.use(Vuex);
 
+// TODO: Add types
 export default new Vuex.Store({
 	state: {
 		jobs: [],
 		selectedJob: {},
 		modal: false,
 		overlay: false,
+		error: null,
 	},
 	mutations: {
 		setJobs(store, jobs) {
 			store.jobs = jobs;
+		},
+		setError(store, error) {
+			store.error = error;
 		},
 		toggleModal(store, action) {
 			store.modal = action;
@@ -29,6 +34,12 @@ export default new Vuex.Store({
 			const url = `http://localhost:3000/api/jobs`;
 			const jobs = await fetch(url).then(r => r.json());
 			commit('setJobs', jobs);
+		},
+		async syncJobs({ commit }) {
+			const url = `http://localhost:3000/api/sync`;
+			const response = await fetch(url).then(r => r.json());
+			if (response.success) commit('setJobs', response.jobs);
+			else commit('setError', response.error);
 		},
 		showJobDetails({ commit }, job) {
 			commit('toggleModal', true);

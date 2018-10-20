@@ -1,6 +1,6 @@
 import { Component, Vue, Prop } from 'vue-property-decorator';
 import { Action } from 'vuex-class';
-import ChevronDown from '@/icons/ChevronDown/ChevronDown.vue';
+import ChevronDown from '@/icons/ChevronDown.vue';
 import { Job } from '@/models/Job';
 
 @Component({

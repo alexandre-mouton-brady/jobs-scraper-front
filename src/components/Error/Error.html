@@ -1,0 +1,7 @@
+<div role="alert" class="m-4 z-50 fixed pin-b pin-r bg-red text-white shadow py-4 px-10 rounded-lg">
+    <button @click="cleanError" class="alert-close">&times;</button>
+    <p>{{ error.message }}</p>
+    <p v-if="timeLeft" class="mt-2">
+        You can try again in <strong><time>{{ timeLeft }} hours</time></strong>
+    </p>
+</div>

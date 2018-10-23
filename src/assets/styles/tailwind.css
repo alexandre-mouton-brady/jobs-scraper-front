@@ -59,12 +59,18 @@ body {
 	@apply bg-black;
 	border-radius: 8px;
 }
+.close {
+	@apply text-whiter text-xl h-8 w-8 rounded-lg absolute pin-t pin-r;
+}
 .modal-close {
-	@apply text-whiter bg-black text-xl h-8 w-8 rounded-full absolute pin-t pin-r m-4;
+	@apply close m-4 bg-black;
 }
 .modal-badge {
 	@apply absolute pin-l pin-t h-16 w-16 bg-white rounded-full ml-16 flex justify-center items-center overflow-hidden;
 	transform: translateY(-35%);
+}
+.alert-close {
+	@apply close bg-reder;
 }
 
 @import '~tailwindcss/utilities.css';
@@ -112,4 +118,18 @@ body {
 .slide-enter,
 .slide-leave-to {
 	transform: translate3d(0, calc(100% + 2.1rem), 0);
+}
+
+.spinningWheel {
+	animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0);
+	}
+
+	to {
+		transform: rotate(-360deg);
+	}
 }

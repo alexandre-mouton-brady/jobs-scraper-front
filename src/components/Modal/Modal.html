@@ -6,7 +6,7 @@
     <transition name="slide">
         <div class="modal" v-if="showModal">
             <span class="modal-badge">
-                <img class="w-100" :src="`http://localhost:3000/imgs/${job.company.logo}`">
+                <img v-if="job.company && job.company.logo" class="w-100" :src="`http://localhost:3000/imgs/${job.company.logo}`">
             </span>
 
             <div class="container flex flex-col relative h-full">

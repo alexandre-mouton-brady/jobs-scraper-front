@@ -1,5 +1,5 @@
 import { Component, Vue } from 'vue-property-decorator';
-import { Action } from 'vuex-class';
+import { Action, State } from 'vuex-class';
 import Sync from '@/icons/Sync.vue';
 
 @Component({
@@ -10,4 +10,7 @@ import Sync from '@/icons/Sync.vue';
 export default class SyncButton extends Vue {
 	@Action
 	syncJobs: () => void;
+
+	@State('fetching')
+	isFetching: boolean;
 }

@@ -49,6 +49,7 @@ let colors = {
 	white: '#fafafb',
 	whiter: '#ffffff',
 	red: '#c9726c',
+	reder: '#af4841',
 	blue: '#221eff',
 	indigo: '#5960f1',
 	purple: '#aaa8f9',

@@ -2,17 +2,22 @@
   <router-view/>
 </template>
 
-<script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import { Action } from 'vuex-class';
+<script>
+import { mapActions } from 'vuex';
 
-@Component
-export default class App extends Vue {
-	@Action
-	fetchJobs: () => void;
+export default {
+	sockets: {
+		connect: function() {
+			console.log('socket connected');
+		},
+		job: function(job) {
+			console.log({ job });
+		},
+	},
 
-	public created() {
-		this.fetchJobs();
-	}
-}
+	created() {
+		this.$store.dispatch('fetchJobs');
+	},
+};
 </script>
+

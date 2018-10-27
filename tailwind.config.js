@@ -46,9 +46,10 @@ let colors = {
 	transparent: 'transparent',
 	black: '#161819',
 	grey: '#969696',
-	white: '#f5f4f7',
+	white: '#fafafb',
 	whiter: '#ffffff',
 	red: '#c9726c',
+	reder: '#af4841',
 	blue: '#221eff',
 	indigo: '#5960f1',
 	purple: '#aaa8f9',
@@ -91,9 +92,7 @@ module.exports = {
 
 	screens: {
 		sm: '576px',
-		md: '768px',
-		lg: '992px',
-		xl: '1200px',
+		md: '740px',
 	},
 
 	/*
@@ -116,6 +115,7 @@ module.exports = {
 
 	fonts: {
 		sans: [
+			'Lato',
 			'system-ui',
 			'BlinkMacSystemFont',
 			'-apple-system',
@@ -332,10 +332,7 @@ module.exports = {
   |
   */
 
-	borderColors: global.Object.assign(
-		{ default: colors['grey-light'] },
-		colors,
-	),
+	borderColors: global.Object.assign({ default: colors['grey-light'] }, colors),
 
 	/*
   |-----------------------------------------------------------------------------
@@ -699,6 +696,7 @@ module.exports = {
 
 	opacity: {
 		'0': '0',
+		'10': '.1',
 		'25': '.25',
 		'50': '.5',
 		'75': '.75',

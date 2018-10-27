@@ -7,6 +7,10 @@
  */
 @import '~tailwindcss/preflight.css';
 
+:root {
+	--scrollbar-width: 8px;
+}
+
 body {
 	@apply font-sans bg-white;
 }
@@ -30,9 +34,22 @@ body {
  * config file.
  */
 
+.fading-borders::before,
+.fading-borders::after {
+	@apply absolute pin-x h-8;
+	margin-right: var(--scrollbar-width);
+	content: '';
+}
+.fading-borders::before {
+	@apply pin-t;
+	background-image: linear-gradient(to bottom, #fff, transparent);
+}
+.fading-borders::after {
+	@apply pin-b;
+	background-image: linear-gradient(to top, #fff, transparent);
+}
 .modal {
 	@apply fixed pin-x pin-b bg-whiter h-screen-75 translateY-0 transition z-20 shadow;
-
 	border-top-left-radius: 2rem;
 	border-top-right-radius: 2rem;
 }
@@ -45,7 +62,7 @@ body {
 	@apply fixed pin bg-white opacity-50 z-10 cursor-not-allowed;
 }
 .scrollbar::-webkit-scrollbar {
-	width: 8px;
+	width: var(--scrollbar-width);
 	border-radius: 8px;
 }
 .scrollbar::-webkit-scrollbar-button {
@@ -72,9 +89,7 @@ body {
 .alert-close {
 	@apply close bg-reder;
 }
-
 @import '~tailwindcss/utilities.css';
-
 /**
  * Here you would add any custom utilities you need that don't come out of the
  * box with Tailwind.
@@ -82,7 +97,6 @@ body {
  * Example:
  * @import 'utilities/background-patterns';
  */
-
 .translateY-100 {
 	transform: translate3d(0, calc(100% + 2.1rem), 0);
 }
@@ -101,7 +115,6 @@ body {
 	transition-duration: 300ms;
 	transition-timing-function: ease-in-out;
 }
-
 .fade-enter-active,
 .fade-leave-active {
 	transition: opacity 0.5s;
@@ -110,7 +123,6 @@ body {
 .fade-leave-to {
 	opacity: 0;
 }
-
 .slide-enter-active,
 .slide-leave-active {
 	transition: transform 0.5s;
@@ -119,16 +131,13 @@ body {
 .slide-leave-to {
 	transform: translate3d(0, calc(100% + 2.1rem), 0);
 }
-
 .spinningWheel {
 	animation: spin 1.5s linear infinite;
 }
-
 @keyframes spin {
 	from {
 		transform: rotate(0);
 	}
-
 	to {
 		transform: rotate(-360deg);
 	}

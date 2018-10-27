@@ -7,11 +7,11 @@ import { mapActions } from 'vuex';
 
 export default {
 	sockets: {
-		connect: function() {
-			console.log('socket connected');
+		job(job) {
+			this.$store.commit('addJob', job);
 		},
-		job: function(job) {
-			console.log({ job });
+		fetchStart() {
+			this.$store.commit('clearJobs');
 		},
 	},
 

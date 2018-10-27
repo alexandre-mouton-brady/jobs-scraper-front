@@ -1,11 +1,14 @@
-<main class="container overflow-hidden py-8">
-    <h1 class="font-semibold">Alex's Job Listing</h1>
-
+<main ref="container" class="container overflow-hidden pb-8">
     <sync-button />
 
-    <section class="mt-8" v-if="jobs">
-        <scraper-job v-for="job in jobs" :key="job.id" :job="job" />
-    </section>
+    <svg viewBox="0 0 100 11" preserveAspectRatio="xMidYMin slice" class="block w-full">
+        <text x="0" y="95%" class="uppercase opacity-10 leading-none font-semibold " style="font-size: 13.4px">Alex's Job Listing</text>
+    </svg>
+    <!-- <h1 class="font-semibold text-center uppercase opacity-25 leading-none text-5xl" :style="`font-size: ${vw}vw`">Alex's Job Listing</h1> -->
+    
+    <slide-x-right-transition group tag="section" v-if="jobs">
+        <scraper-job v-for="(job, i) in jobs" :key="job.id" :job="job" :class="{  'mt-6': i > 0 }" />
+    </slide-x-right-transition>
 
     <modal />
 

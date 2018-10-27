@@ -1,13 +1,14 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import { Job } from './models/Job';
 
 Vue.use(Vuex);
 
 // TODO: Add types
 export default new Vuex.Store({
 	state: {
-		jobs: null,
-		selectedJob: {},
+		jobs: [] as Job[],
+		selectedJob: {} as Job,
 		modal: false,
 		overlay: false,
 		error: null,
@@ -19,6 +20,9 @@ export default new Vuex.Store({
 		},
 		stopFetching(store) {
 			store.fetching = false;
+		},
+		addJob(store, job: Job) {
+			store.jobs.unshift(job);
 		},
 		setJobs(store, jobs) {
 			store.jobs = jobs;
@@ -35,6 +39,9 @@ export default new Vuex.Store({
 		selectJob(store, job) {
 			store.selectedJob = job;
 		},
+		clearJobs(store) {
+			store.jobs.length = 0;
+		},
 		cleanError(store) {
 			store.error = null;
 		},
@@ -50,8 +57,7 @@ export default new Vuex.Store({
 
 			const url = `http://localhost:3000/api/sync`;
 			const response = await fetch(url).then(r => r.json());
-			if (response.success) commit('setJobs', response.jobs);
-			else commit('setError', response.error);
+			if (!response.success) commit('setError', response.error);
 
 			commit('stopFetching');
 		},

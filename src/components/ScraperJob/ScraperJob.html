@@ -1,6 +1,6 @@
-<article class="bg-whiter px-4 py-2 mt-6 rounded-lg flex items-center shadow">
+<article class="bg-whiter px-4 py-2 rounded-lg flex items-center shadow">
     <div class="h-16 w-16 rounded-full bg-white flex justify-center items-center overflow-hidden">
-        <img class="w-100" :src="`http://localhost:3000/imgs/${job.company.logo}`">
+        <img v-if="job.company && job.company.logo" class="w-100" :src="`http://localhost:3000/imgs/${job.company.logo}`">
     </div>
 
     <div class="m-5">

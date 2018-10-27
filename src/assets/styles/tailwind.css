@@ -31,7 +31,7 @@ body {
  */
 
 .modal {
-	@apply fixed pin-x pin-b bg-whiter h-screen-75 translateY-0 transition z-20;
+	@apply fixed pin-x pin-b bg-whiter h-screen-75 translateY-0 transition z-20 shadow;
 
 	border-top-left-radius: 2rem;
 	border-top-right-radius: 2rem;

@@ -97,8 +97,14 @@ body {
  * Example:
  * @import 'utilities/background-patterns';
  */
+.left-50 {
+	left: 50%;
+}
 .translateY-100 {
 	transform: translate3d(0, calc(100% + 2.1rem), 0);
+}
+.translate-50-50 {
+	transform: translate3d(-50%, -40%, 0);
 }
 .translateY-0 {
 	transform: translate3d(0, 0, 0);
@@ -133,6 +139,9 @@ body {
 }
 .spinningWheel {
 	animation: spin 1.5s linear infinite;
+}
+.text-shadow {
+	text-shadow: 0 -1px 0px rgba(50, 50, 50, 0.6), 0 -2px 0px rgba(50, 50, 50, 0.8);
 }
 @keyframes spin {
 	from {

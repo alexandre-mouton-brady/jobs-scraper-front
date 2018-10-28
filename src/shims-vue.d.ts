@@ -5,3 +5,5 @@ declare module '*.vue' {
 
 declare module 'vue-socket.io';
 declare module 'vue2-transitions';
+declare module 'animejs';
+declare module 'vue-virtual-scroller';

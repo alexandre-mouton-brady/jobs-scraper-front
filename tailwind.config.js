@@ -50,6 +50,7 @@ let colors = {
 	whiter: '#ffffff',
 	red: '#c9726c',
 	reder: '#af4841',
+	orange: '#f1a259',
 	blue: '#221eff',
 	indigo: '#5960f1',
 	purple: '#aaa8f9',
@@ -354,7 +355,7 @@ module.exports = {
 		none: '0',
 		sm: '.125rem',
 		default: '.25rem',
-		lg: '.5rem',
+		lg: '1rem',
 		full: '9999px',
 	},
 
